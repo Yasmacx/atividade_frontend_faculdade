@@ -1,0 +1,13 @@
+<html>
+<head>
+<title>Exemplo JavaScript</title>
+<script>
+alert("Eu estou no cabeçalho.");
+</script>
+</head>
+<body>
+<script>
+document.write("<b class= ' teste ' >Eu estou no corpo do documento.</b>");
+</script>
+</body>
+</html>
