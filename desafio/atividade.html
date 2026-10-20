@@ -9,16 +9,16 @@
 
     <h1>Temperaturas da Semana</h1>
 
-    <button onclick="calcularTemperaturas()">
+    <button onclick="calcularTemperaturas()"> <!--input do usuario, botao flutuante-->
         Informar temperaturas
     </button>
 
-    <div id="resultado"></div>
+    <div id="resultado"></div> 
 
+    <!--logica da programação em html-->
     <script>
         function calcularTemperaturas() {
 
-            // Vetor com os dias da semana
             let dias = [
                 "Segunda-feira",
                 "Terça-feira",
@@ -29,15 +29,13 @@
                 "Domingo"
             ];
 
-            // Vetor que armazenará as temperaturas
+            // funcao do calculo
             let temperaturas = [];
 
-            // Variáveis para os cálculos
             let soma = 0;
             let acima = 0;
             let abaixo = 0;
 
-            // Solicitar as temperaturas dos 7 dias
             for (let i = 0; i < 7; i++) {
                 temperaturas[i] = Number(
                     prompt("Digite a temperatura de " + dias[i] + ":")
@@ -46,10 +44,8 @@
                 soma = soma + temperaturas[i];
             }
 
-            // Calcular a média do período
             let media = soma / 7;
 
-            // Preparar a exibição dos resultados
             let resultado = "<h2>Resultados da semana</h2>";
 
             resultado += "<p>Média das temperaturas: "
@@ -57,13 +53,11 @@
 
             resultado += "<h3>Temperaturas por dia</h3>";
 
-            // Exibir os dias e suas temperaturas
             for (let i = 0; i < 7; i++) {
 
                 resultado += "<p>" + dias[i] + ": "
                     + temperaturas[i] + " °C</p>";
 
-                // Verificar se ficou acima ou abaixo da média
                 if (temperaturas[i] > media) {
                     acima++;
                 } else if (temperaturas[i] < media) {
@@ -71,7 +65,6 @@
                 }
             }
 
-            // Exibir as quantidades
             resultado += "<p>Dias acima da média: "
                 + acima + "</p>";
 
